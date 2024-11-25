@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         element: <CourseListPage />,
       },
       {
-        path: "/courses/:courseId",
+        path: "/courses/:course-slug",
         element: <CourseDetailPage />,
       },
       {
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element: <BlogPage />,
       },
       {
-        path: "/blog/:blogId",
+        path: "/blog/:blog-slug",
         element: <BlogDetailPage />,
       },
       {
@@ -63,6 +63,10 @@ const router = createBrowserRouter([
         path: "/support",
         element: <SupportPage />,
       },
+      {
+        path: "/login",
+        element: <
+      }
     ],
   },
 ]);
