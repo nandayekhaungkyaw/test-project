@@ -16,7 +16,7 @@ export default {
         h1: "49px", // use as className="text-h1"/"text-para1" etc.
         h2: "39px",
         para: "20px",
-        para2: "16px",
+        paraTwo: "16px",
       },
       colors: {
         primary: {
