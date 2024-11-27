@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerComponent from "./ContainerComponent";
 import NavigationLinks from "./NavigationLinks";
-import Logo from "./Logo";
+import Logo from "../../../components/Logo";
 import { HiAcademicCap, HiMiniMagnifyingGlass } from "react-icons/hi2";
 import PrimaryBtn from "./PrimaryBtn";
 import SecondaryBtn from "./SecondaryBtn";
 import { Link } from "react-router-dom";
+import ContainerComponent from "../../../components/ContainerComponent";
 
 const Header = () => {
   return (
@@ -20,27 +20,27 @@ const Header = () => {
           <NavigationLinks />
         </div>
         <div className="flex">
-          <label for="simple-search" class="sr-only">
+          <label htmlFor="simple-search" className="sr-only">
             Search
           </label>
-          <div class="relative w-full">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <HiAcademicCap className="size-4" />
+          <div className="relative w-full">
+            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <HiAcademicCap className="size-4" />
             </div>
             <input
               type="text"
               id="simple-search"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search Courses..."
               required
             />
           </div>
           <button
             type="submit"
-            class="p-2.5 ms-2 text-sm font-medium text-white bg-primary-500 rounded-lg border border-primary-500 hover:border-primary-700 hover:bg-primary-700 focus:ring-2 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-600 dark:focus:ring-primary-800"
+            className="p-2.5 ms-2 text-sm font-medium text-white bg-primary-500 rounded-lg border border-primary-500 hover:border-primary-700 hover:bg-primary-700 focus:ring-2 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-600 dark:focus:ring-primary-800"
           >
             <svg
-              class="w-4 h-4"
+              className="w-4 h-4"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -54,12 +54,20 @@ const Header = () => {
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>
-            <span class="sr-only">Search</span>
+            <span className="sr-only">Search</span>
           </button>
         </div>
         <div className="flex items-center justify-between shrink-0 gap-3">
-          <SecondaryBtn>Sign up</SecondaryBtn>
-          <PrimaryBtn>Sign in</PrimaryBtn>
+          <Link to={"/register"}>
+            <SecondaryBtn className={"px-4 py-2"} isBorderGreen={true}>
+              Sign up
+            </SecondaryBtn>
+          </Link>
+          <Link to={"/login"}>
+            <PrimaryBtn className={"px-4 py-2"} isBlack={true}>
+              Sign in
+            </PrimaryBtn>
+          </Link>
         </div>
       </ContainerComponent>
     </header>
