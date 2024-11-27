@@ -82,7 +82,7 @@ const publicRoute = [
     element: <BlogPage />,
   },
   {
-    path: "blog/:blog-slug",
+    path: "blog/:blogSlug",
     element: <BlogDetailPage />,
   },
   {
