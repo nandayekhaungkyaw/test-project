@@ -15,8 +15,8 @@ export default {
       fontSize: {
         h1: "49px", // use as className="text-h1"/"text-para1" etc.
         h2: "39px",
-        para1: "20px",
-        para2: "16px",
+        paraOne: "20px",
+        paraTwo: "16px",
       },
       colors: {
         primary: {
