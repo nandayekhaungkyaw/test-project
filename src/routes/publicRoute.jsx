@@ -1,5 +1,6 @@
 import { lazy } from "react";
 
+
 // const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
 // const ContactUsPage = lazy(() =>
 //   import("../features/public/pages/ContactUsPage")
@@ -27,9 +28,9 @@ const LandingPage = lazy(() =>
 const CourseListPage = lazy(() =>
   import("../features/public/pages/CourseListPage")
 );
-const CourseDetailPage = lazy(() =>
-  import("../features/public/pages/CourseDetailPage")
-);
+const CourseDetailPage= lazy(()=>
+  import( "../features/public/courseDetail/Pages/CourseDetailPage"));
+
 const BlogPage = lazy(() => import("../features/public/pages/BlogPage"));
 const BlogDetailPage = lazy(() =>
   import("../features/public/pages/BlogDetailPage")
@@ -70,7 +71,7 @@ const publicRoute = [
     element: <CourseListPage />,
   },
   {
-    path: "courses/:course-slug",
+    path: "courses/course-detail",
     element: <CourseDetailPage />,
   },
   {
