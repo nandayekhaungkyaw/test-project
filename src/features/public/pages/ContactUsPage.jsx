@@ -18,16 +18,16 @@ import IGicon from "../components/IGicon";
 import { Link } from "react-router-dom";
 const ContactUsPage = () => {
   return (
-    <section className=" space-y-32 mb-32">
+    <section className=" lg:space-y-32 md:space-y-20 md:mb-20 lg:mb-32">
       <LandingSection name="Contact us" imgPath={hero} />
 
-      <ContainerComponent className=" space-y-32 ">
-        <div className="grid grid-cols-12 gap-x-5  gap-y-10">
-          <h1 className=" font-semibold text-h1 text-heading col-span-12 text-center ">
+      <ContainerComponent className=" lg:space-y-32 md:space-y-20 ">
+        <div className="grid md:grid-cols-8 lg:grid-cols-12 sm:grid-cols-4 justify-center  gap-x-5  gap-y-10">
+          <h1 className=" font-semibold text-h1 md:text-4xl text-heading col-span-full text-center ">
             We’re here to Help You
           </h1>
-          <div className=" col-span-4 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl font-semibold text-heading text-center ">
+          <div className=" lg:col-span-4 md:col-start-3 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
+            <h3 className=" text-3xl md:text-2xl font-semibold text-heading text-center ">
               Customer Support
             </h3>
             <p className="flex  items-start justify-center">
@@ -52,8 +52,8 @@ const ContactUsPage = () => {
               </span>{" "}
             </p>
           </div>
-          <div className=" col-span-4 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl font-semibold text-heading text-center ">
+          <div className=" lg:col-span-4 md:col-start-3 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
+            <h3 className=" text-3xl md:text-2xl font-semibold text-heading text-center ">
               Contact Address
             </h3>
             <p className="flex  items-start justify-center">
@@ -78,8 +78,8 @@ const ContactUsPage = () => {
               </span>{" "}
             </p>
           </div>{" "}
-          <div className=" col-span-4 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl font-semibold text-heading text-center ">
+          <div className=" lg:col-span-4 md:col-start-3 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
+            <h3 className=" text-3xl md:text-2xl font-semibold text-heading text-center ">
               Main Office Address
             </h3>
             <p className="flex  items-start justify-center">
@@ -105,18 +105,18 @@ const ContactUsPage = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-x-5 items-stretch gap-y-10">
-          <h1 className=" text-h1 font-semibold col-span-12  text-center  text-heading">
+        <div className="grid md:grid-cols-8 lg:grid-cols-12 sm:grid-cols-4 gap-x-5 items-stretch gap-y-10">
+          <h1 className=" text-h1 md:text-h2 font-semibold col-span-full md:col-span-full  text-center  text-heading">
             Get In Touch
           </h1>
-          <div className=" col-span-5">
+          <div className=" lg:col-span-5 md:col-span-6 md:justify-self-center md:col-start-2">
             <img src={getInTouchImg} width="100%" alt="getInTouchImg" />
           </div>
-          <div className=" flex flex-col gap-5 py-2 col-span-6 col-start-7">
+         <div className=" flex flex-col gap-5 py-2 lg:col-span-6 md:px-12 md:col-span-8 md:col-start-1 lg:col-start-7">
             <div className="flex gap-5 ">
               {" "}
               <div className="flex flex-col gap-2 flex-grow">
-                <label htmlFor="nameForContactForm">Name</label>
+                <label className=" font-kite" htmlFor="nameForContactForm">Name</label>
                 <input
                   id="nameForContactForm"
                   className="  flex    w-full rounded-lg border border-paraTertiary  px-3 py-2
@@ -128,7 +128,7 @@ const ContactUsPage = () => {
                 />
               </div>{" "}
               <div className="flex flex-col gap-2 flex-grow">
-                <label htmlFor="emailForContactForm">Email</label>
+                <label className=" font-kite" htmlFor="emailForContactForm">Email</label>
                 <input
                   id="emailForContactForm"
                   className="  flex    w-full rounded-md border border-paraTertiary  px-3 py-2
@@ -141,7 +141,7 @@ const ContactUsPage = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2 ">
-              <label htmlFor="phoneForContactForm">Phone</label>
+              <label className=" font-kite" htmlFor="phoneForContactForm">Phone</label>
               <input
                 id="phoneForContactForm"
                 className="  flex     w-full rounded-lg border border-paraTertiary  px-3 py-2
@@ -153,7 +153,7 @@ const ContactUsPage = () => {
               />
             </div>
             <div className="flex flex-col flex-grow gap-2 ">
-              <label htmlFor="messageForContactForm">Message</label>
+              <label className=" font-kite" htmlFor="messageForContactForm">Message</label>
               <textarea
                 className=" flex-grow rounded-lg px-4 py-3 w-full flex border border-paraTertiary
                             ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium 
@@ -180,7 +180,6 @@ const ContactUsPage = () => {
                 Follow us on
               </p>
               <div className=" flex gap-2 ">
-                {/* <FaFacebookSquare fill="text-neutral-50" className=" size-8 text-para4 bg-para4 p-1 " /> */}
                 <a href="#">
                   {" "}
                   <FBicon
@@ -218,7 +217,7 @@ const ContactUsPage = () => {
                   />
                 </a>
                 <a href="#">
-                  {" "}
+               
                   <YTicon
                     className=" p-2 rounded-md  bg-para4 "
                     width="32"
@@ -228,9 +227,9 @@ const ContactUsPage = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
-        <div className=" col-auto h-[478px] ">
+        <div className=" col-auto h-[478px] md:h-[337px] ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.763498671471!2d96.13149100963174!3d16.838084783891443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1edbb8a89416d%3A0x64420f52367032b9!2sMMS%20IT!5e0!3m2!1sen!2smm!4v1732870842557!5m2!1sen!2smm"
             width="100%"

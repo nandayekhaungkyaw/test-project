@@ -22,7 +22,7 @@ const BlogPage = () => {
 
       <ContainerComponent className={"flex flex-col gap-section-spacing"}>
         <div className=" grid grid-cols-12  gap-x-5 gap-y-10  auto-rows-min ">
-          <h2 className=" col-span-12 font-semibold text-heading text-4xl justify-self-center self-center ">
+          <h2 className=" col-span-full font-semibold text-heading text-4xl justify-self-center self-center ">
             {" "}
             Events and announcements
           </h2>
@@ -46,7 +46,7 @@ const BlogPage = () => {
 
           <div className=" flex flex-col  col-span-6     gap-5">
             <Link
-      to={`/blog/${blogs[0].slug}`}
+              to={`/blog/${blogs[0].slug}`}
               className=" cursor-pointer flex gap-5 shadow rounded border border-borderBlog items-center"
             >
               <img src={event2Img} alt="eventPhoto2" />
@@ -59,7 +59,7 @@ const BlogPage = () => {
               </div>
             </Link>
             <Link
- to={`/blog/${blogs[0].slug}`}
+              to={`/blog/${blogs[0].slug}`}
               className=" cursor-pointer flex gap-5 shadow rounded border border-borderBlog items-center"
             >
               <img src={event3Img} alt="eventPhoto3" />
@@ -77,7 +77,10 @@ const BlogPage = () => {
             Our Latest Blogs
           </h1>
           <div className=" grid grid-cols-12 gap-y-10 gap-x-5">
-            <Link  to={`/blog/${blogs[0].slug}`} className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog">
+            <Link
+              to={`/blog/${blogs[0].slug}`}
+              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+            >
               <img className="" src={LatestBlog1} alt="eventPhoto1" />
 
               <div className=" space-y-5 px-1 ">
@@ -100,7 +103,10 @@ const BlogPage = () => {
                 </div>
               </div>
             </Link>
-            <Link  to={`/blog/${blogs[0].slug}`} className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog">
+            <Link
+              to={`/blog/${blogs[0].slug}`}
+              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+            >
               <img className="" src={LatestBlog2} alt="eventPhoto1" />
 
               <div className=" space-y-5 px-1 ">
@@ -122,7 +128,10 @@ const BlogPage = () => {
                 </div>
               </div>
             </Link>
-            <Link  to={`/blog/${blogs[0].slug}`} className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog">
+            <Link
+              to={`/blog/${blogs[0].slug}`}
+              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+            >
               <img className="" src={LatestBlog3} alt="eventPhoto1" />
 
               <div className=" space-y-5 px-1 ">
@@ -144,7 +153,10 @@ const BlogPage = () => {
                 </div>
               </div>
             </Link>
-            <Link  to={`/blog/${blogs[0].slug}`} className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog">
+            <Link
+              to={`/blog/${blogs[0].slug}`}
+              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+            >
               <img className="" src={LatestBlog4} alt="eventPhoto1" />
 
               <div className=" space-y-5 px-1 ">
@@ -165,7 +177,10 @@ const BlogPage = () => {
                 </div>
               </div>
             </Link>
-            <Link  to={`/blog/${blogs[0].slug}`} className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog">
+            <Link
+              to={`/blog/${blogs[0].slug}`}
+              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+            >
               <img className="" src={LatestBlog5} alt="eventPhoto1" />
 
               <div className=" flex flex-col gap-5 flex-grow   px-1 ">
@@ -187,7 +202,10 @@ const BlogPage = () => {
                 </div>
               </div>
             </Link>
-            <Link  to={`/blog/${blogs[0].slug}`} className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog">
+            <Link
+              to={`/blog/${blogs[0].slug}`}
+              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+            >
               <img className="" src={LatestBlog6} alt="eventPhoto1" />
 
               <div className=" space-y-5 px-1 ">

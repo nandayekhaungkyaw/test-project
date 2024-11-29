@@ -16,7 +16,7 @@ const BlogDetailPage = () => {
 
   return (
     <section className=" space-y-section-spacing mb-32">
-      <section className="  grid-rows-[420px] items-center col-span-12 grid grid-cols-12  gap-5 bg-bg1">
+      <section className="  grid-rows-[420px] items-center col-span-full grid grid-cols-12  gap-5 bg-bg1">
         <div className=" col-span-8 col-start-3 px-9  space-y-4 mx-auto">
 <ShowDate date={blogs[currentElementIndex].date}/>
           <p className=" text-2xl text-para4 font-medium">
