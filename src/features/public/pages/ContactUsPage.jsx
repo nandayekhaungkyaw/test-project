@@ -18,16 +18,16 @@ import IGicon from "../components/IGicon";
 import { Link } from "react-router-dom";
 const ContactUsPage = () => {
   return (
-    <section className=" lg:space-y-32 md:space-y-20 md:mb-20 lg:mb-32">
+    <section className=" lg:space-y-32  sm:mb-20  mb-10 space-y-10 lg:mb-32">
       <LandingSection name="Contact us" imgPath={hero} />
 
-      <ContainerComponent className=" lg:space-y-32 md:space-y-20 ">
-        <div className="grid md:grid-cols-8 lg:grid-cols-12 sm:grid-cols-4 justify-center  gap-x-5  gap-y-10">
-          <h1 className=" font-semibold text-h1 md:text-4xl text-heading col-span-full text-center ">
+      <ContainerComponent className=" mx-auto lg:space-y-32 sm:space-y-20 space-y-10 ">
+        <div className="grid grid-cols-4  lg:grid-cols-12 sm:grid-cols-8 md:grid-cols-8 justify-center  gap-x-5  gap-y-10">
+          <h1 className=" font-semibold sm:text-3xl lg:text-h1 md:text-4xl text-heading col-span-full text-center ">
             We’re here to Help You
           </h1>
-          <div className=" lg:col-span-4 md:col-start-3 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl md:text-2xl font-semibold text-heading text-center ">
+          <div className=" lg:col-span-4 col-span-full sm:col-span-4 sm:col-start-3   bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
+            <h3 className=" lg:text-3xl md:text-2xl sm:text-2xl  font-semibold text-heading text-center ">
               Customer Support
             </h3>
             <p className="flex  items-start justify-center">
@@ -52,8 +52,8 @@ const ContactUsPage = () => {
               </span>{" "}
             </p>
           </div>
-          <div className=" lg:col-span-4 md:col-start-3 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl md:text-2xl font-semibold text-heading text-center ">
+          <div className=" lg:col-span-4 col-span-full  sm:col-span-4 sm:col-start-3  bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
+            <h3 className=" text-3xl md:text-2xl sm:text-2xl  font-semibold text-heading text-center ">
               Contact Address
             </h3>
             <p className="flex  items-start justify-center">
@@ -78,8 +78,8 @@ const ContactUsPage = () => {
               </span>{" "}
             </p>
           </div>{" "}
-          <div className=" lg:col-span-4 md:col-start-3 bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl md:text-2xl font-semibold text-heading text-center ">
+          <div className=" lg:col-span-4 col-span-full  sm:col-span-4 sm:col-start-3  bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
+            <h3 className=" text-3xl md:text-2xl sm:text-2xl  font-semibold text-heading text-center ">
               Main Office Address
             </h3>
             <p className="flex  items-start justify-center">
@@ -105,14 +105,14 @@ const ContactUsPage = () => {
             </p>
           </div>
         </div>
-        <div className="grid md:grid-cols-8 lg:grid-cols-12 sm:grid-cols-4 gap-x-5 items-stretch gap-y-10">
-          <h1 className=" text-h1 md:text-h2 font-semibold col-span-full md:col-span-full  text-center  text-heading">
+        <div className="grid sm:grid-cols-8 lg:grid-cols-12 sm:gap-y-8 px-3  gap-x-5 items-stretch lg:gap-y-10">
+          <h1 className=" lg:text-h1  sm:text-h2 font-semibold col-span-full sm:col-span-full  text-center  text-heading">
             Get In Touch
           </h1>
-          <div className=" lg:col-span-5 md:col-span-6 md:justify-self-center md:col-start-2">
+          <div className=" lg:col-span-5 sm:col-span-6 sm:justify-self-center sm:col-start-2">
             <img src={getInTouchImg} width="100%" alt="getInTouchImg" />
           </div>
-         <div className=" flex flex-col gap-5 py-2 lg:col-span-6 md:px-12 md:col-span-8 md:col-start-1 lg:col-start-7">
+         <div className=" flex flex-col sm:col-span-full gap-5 py-2 lg:col-span-6 sm:px-12 md:px-14   lg:col-start-7">
             <div className="flex gap-5 ">
               {" "}
               <div className="flex flex-col gap-2 flex-grow">
@@ -155,6 +155,8 @@ const ContactUsPage = () => {
             <div className="flex flex-col flex-grow gap-2 ">
               <label className=" font-kite" htmlFor="messageForContactForm">Message</label>
               <textarea
+              rows="4"
+              
                 className=" flex-grow rounded-lg px-4 py-3 w-full flex border border-paraTertiary
                             ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium 
                             placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 
@@ -174,7 +176,7 @@ const ContactUsPage = () => {
               </span>
               <FiSend />
             </PrimaryBtn>
-            <div className="flex gap-5">
+            <div className="flex gap-5 items-center">
               {" "}
               <p className=" font-medium text-para text-footerColor">
                 Follow us on
@@ -229,7 +231,7 @@ const ContactUsPage = () => {
             </div>
           </div> 
         </div>
-        <div className=" col-auto h-[478px] md:h-[337px] ">
+        <div className=" col-span-full  lg:h-[478px] h-[250px] sm:h-[337px] ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.763498671471!2d96.13149100963174!3d16.838084783891443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1edbb8a89416d%3A0x64420f52367032b9!2sMMS%20IT!5e0!3m2!1sen!2smm!4v1732870842557!5m2!1sen!2smm"
             width="100%"
