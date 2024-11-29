@@ -181,35 +181,51 @@ const ContactUsPage = () => {
               </p>
               <div className=" flex gap-2 ">
                 {/* <FaFacebookSquare fill="text-neutral-50" className=" size-8 text-para4 bg-para4 p-1 " /> */}
-             <a href="#">   <FBicon
-                  className=" p-2 rounded-md  bg-para4 "
-                  width="32"
-                  height="32"
-                  iconColor="#525252"
-                /></a>
-             <a href="#">   <IGicon
-                  className=" p-2 rounded-md  bg-para4 "
-                  width="32"
-                  height="32"
-                  iconColor="white"
-                /></a>
-             <a href="#">   <TwitterIcon
-                  className=" p-2 rounded-md  bg-para4 "
-                  width="32"
-                  height="32"
-                  iconColor="white"
-                /></a>              <a href="#">  <Linkedinicon
-                className=" p-2 rounded-md  bg-para4 "
-                width="32"
-                height="32"
-                iconColor="white"
-              /></a>
-              <a href="#">  <YTicon
-                  className=" p-2 rounded-md  bg-para4 "
-                  width="32"
-                  height="32"
-                  iconColor="white"
-                /></a>
+                <a href="#">
+                  {" "}
+                  <FBicon
+                    className=" p-2 rounded-md  bg-para4 "
+                    width="32"
+                    height="32"
+                    iconColor="#525252"
+                  />
+                </a>
+                <a href="#">
+                  {" "}
+                  <IGicon
+                    className=" p-2 rounded-md  bg-para4 "
+                    width="32"
+                    height="32"
+                    iconColor="white"
+                  />
+                </a>
+                <a href="#">
+                  {" "}
+                  <TwitterIcon
+                    className=" p-2 rounded-md  bg-para4 "
+                    width="32"
+                    height="32"
+                    iconColor="white"
+                  />
+                </a>{" "}
+                <a href="#">
+                  {" "}
+                  <Linkedinicon
+                    className=" p-2 rounded-md  bg-para4 "
+                    width="32"
+                    height="32"
+                    iconColor="white"
+                  />
+                </a>
+                <a href="#">
+                  {" "}
+                  <YTicon
+                    className=" p-2 rounded-md  bg-para4 "
+                    width="32"
+                    height="32"
+                    iconColor="white"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -220,9 +236,9 @@ const ContactUsPage = () => {
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </ContainerComponent>
