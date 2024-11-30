@@ -21,70 +21,96 @@ const BlogPage = () => {
       <LandingSection name="Blog" imgPath={hero} />
 
       <ContainerComponent className={"flex flex-col gap-section-spacing"}>
-        <div className=" grid grid-cols-12  gap-x-5 gap-y-10  auto-rows-min ">
-          <h2 className=" col-span-full font-semibold text-heading text-4xl justify-self-center self-center ">
+        <div className=" grid grid-cols-4 lg:grid-cols-12 sm:grid-cols-8 gap-x-5 gap-y-10  auto-rows-min ">
+          <h2 className=" col-span-full font-semibold text-heading sm:text-4xl text-2xl justify-self-center self-center ">
             {" "}
             Events and announcements
           </h2>
-          <div className="  col-span-6 shadow border border-borderBlog rounded ">
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" cursor-pointer flex flex-col gap-5 pb-4"
-            >
-              <img className="" src={event1Img} alt="eventPhoto1" />
 
-              <div className=" px-4 space-y-4">
-                <p className=" text-2xl text-para4 font-medium">
-                  Announcing 10 entry-level Professional Certificates from our
-                  biggest partners as digital transformation reshapes the labor
-                  market
-                </p>
-                <p className=" text-para4  ">July 28, 2024</p>
-              </div>
-            </Link>
-          </div>
+          <Link
+            to={`/blog/${blogs[0].slug}`}
+            className=" cursor-pointer flex flex-col gap-5 pb-4 col-span-full  lg:col-span-4  shadow border border-borderBlog rounded "
+          >
+            <img className="" width="100%" src={event1Img} alt="eventPhoto1" />
 
-          <div className=" flex flex-col  col-span-6     gap-5">
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" cursor-pointer flex gap-5 shadow rounded border border-borderBlog items-center"
-            >
-              <img src={event2Img} alt="eventPhoto2" />
-              <div className="flex flex-col gap-4">
-                <p className=" font-medium text-2xl text-para4 ">
-                  Introducing Pathway Academy’s 2024 Outstanding Enterprise
-                  Customer Achievement Award Winners
+            <div className=" px-4 space-y-4 flex flex-col justify-between flex-grow  ">
+              <p className=" lg:text-xl font-semibold text-para4 ">
+                10 entry-level Professional Certificates for the digital job
+                market
+              </p>
+              <div>
+                {" "}
+                <p className=" font-hind leading-6 text-para1 xl:block hidden line-clamp-3  ">
+                  We're excited to announce the expansion of our entry-level
+                  Professional Certificate portfolio with 10 new programs from
+                  industry partners. Pathway{" "}
                 </p>
                 <p className=" text-para4 ">Mar 23, 2024</p>
               </div>
-            </Link>
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" cursor-pointer flex gap-5 shadow rounded border border-borderBlog items-center"
-            >
-              <img src={event3Img} alt="eventPhoto3" />
-              <div className="flex flex-col gap-4">
-                <p className=" font-medium text-2xl text-para4 ">
-                  "AI Grading: Faster, Quality Feedback on Pathway Academy
+            </div>
+          </Link>
+
+          <Link
+            to={`/blog/${blogs[0].slug}`}
+            className=" col-span-full lg:col-span-4 cursor-pointer flex flex-col gap-5 pb-4 shadow rounded border border-borderBlog items-start"
+          >
+            <img src={event2Img} width="100%" alt="eventPhoto2" />
+            <div className="px-4 space-y-4 flex flex-col justify-between flex-grow  ">
+              <p className=" lg:text-xl font-semibold text-para4 ">
+                Introducing Pathway Academy’s 2024 Outstanding Enterprise
+                Customer Achievement Award Winners
+              </p>
+              <div>
+                <p className=" font-hind leading-6 text-para1 xl:block hidden line-clamp-3 ">
+                  {" "}
+                  Ready to dive into the world of development? Whether you're
+                  aiming to build websites, mobile apps, or software, this guide
+                  .......
+                </p>
+
+                <p className=" text-para4 ">Mar 23, 2024</p>
+              </div>
+            </div>
+          </Link>
+          <Link
+            to={`/blog/${blogs[0].slug}`}
+            className=" cursor-pointer col-span-full lg:col-span-4 flex flex-col  gap-5 pb-4 shadow rounded border border-borderBlog items-start"
+          >
+            <img src={event3Img} width="100%" alt="eventPhoto3" />
+            <div className="px-4 space-y-4 flex flex-col justify-between flex-grow ">
+              <p className=" font-semibold lg:text-xl text-para4 ">
+                "AI Grading: Faster, Quality Feedback on Pathway Academy
+              </p>
+              <div>
+                {" "}
+                <p className=" font-hind leading-6z text-para1 xl:block hidden line-clamp-3 ">
+                  Ready to dive into the world of development? Whether you're
+                  aiming to build websites, mobile apps, or software, this guide
+                  .......
                 </p>
                 <p className=" text-para4 ">July 1, 2024</p>
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
         <div className=" space-y-10">
-          <h1 className=" font-semibold text-4xl text-center text-heading">
+          <h1 className=" font-semibold text-2xl sm:text-4xl text-center text-heading">
             Our Latest Blogs
           </h1>
-          <div className=" grid grid-cols-12 gap-y-10 gap-x-5">
+          <div className=" grid grid-cols-4  sm:grid-cols-8 lg:grid-cols-12 gap-y-10 gap-x-5">
             <Link
               to={`/blog/${blogs[0].slug}`}
-              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+              className=" col-span-full lg:col-span-4  flex flex-col rounded shadow gap-5 border  border-borderBlog"
             >
-              <img className="" src={LatestBlog1} alt="eventPhoto1" />
+              <img
+                className=""
+                width="100%"
+                src={LatestBlog1}
+                alt="eventPhoto1"
+              />
 
-              <div className=" space-y-5 px-1 ">
-                <p className=" text-[1.4rem] text-para3  mb-2 font-semibold">
+              <div className=" space-y-5 sm:px-1 px-2 flex flex-col flex-grow justify-center ">
+                <p className=" text-xl text-para3   font-semibold">
                   Essential Skills to Kickstart Your Development Journey
                 </p>
                 <div className="flex-grow flex flex-col justify-end">
@@ -105,12 +131,12 @@ const BlogPage = () => {
             </Link>
             <Link
               to={`/blog/${blogs[0].slug}`}
-              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
             >
               <img className="" src={LatestBlog2} alt="eventPhoto1" />
 
-              <div className=" space-y-5 px-1 ">
-                <p className=" text-[1.4rem] font-sans text-para3 mb-2 font-semibold">
+              <div className=" space-y-5 px-2 sm:px-1 ">
+                <p className="  text-xl font-sans text-para3 font-semibold">
                   Revolutionizing the Business Landscape
                 </p>
                 <div className="flex-grow flex flex-col justify-end">
@@ -130,12 +156,12 @@ const BlogPage = () => {
             </Link>
             <Link
               to={`/blog/${blogs[0].slug}`}
-              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+              className="col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
             >
               <img className="" src={LatestBlog3} alt="eventPhoto1" />
 
-              <div className=" space-y-5 px-1 ">
-                <p className=" text-[1.4rem] text-para3 mb-2 font-semibold">
+              <div className=" space-y-5 sm:px-1 px-2 flex flex-col flex-grow justify-center">
+                <p className=" text-xl text-para3  font-semibold">
                   Finding Work-Life Balance in Online Learning
                 </p>
                 <div className="flex-grow flex flex-col justify-end">
@@ -155,12 +181,12 @@ const BlogPage = () => {
             </Link>
             <Link
               to={`/blog/${blogs[0].slug}`}
-              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
             >
               <img className="" src={LatestBlog4} alt="eventPhoto1" />
 
               <div className=" space-y-5 px-1 ">
-                <p className=" text-[1.4rem] text-para3 mb-2 font-semibold">
+                <p className=" text-[1.4rem] text-para3  font-semibold">
                   Designing Your First Portfolio Website{" "}
                 </p>
                 <div className="flex-grow flex flex-col justify-end">
@@ -179,12 +205,12 @@ const BlogPage = () => {
             </Link>
             <Link
               to={`/blog/${blogs[0].slug}`}
-              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
             >
               <img className="" src={LatestBlog5} alt="eventPhoto1" />
 
               <div className=" flex flex-col gap-5 flex-grow   px-1 ">
-                <p className=" text-[1.4rem] font-sans text-para3 mb-2 font-semibold">
+                <p className=" text-[1.4rem] font-sans text-para3  font-semibold">
                   Web Development Trends to Watch{" "}
                 </p>
                 <div className="flex-grow flex flex-col justify-end">
@@ -204,12 +230,12 @@ const BlogPage = () => {
             </Link>
             <Link
               to={`/blog/${blogs[0].slug}`}
-              className=" col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
+              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
             >
               <img className="" src={LatestBlog6} alt="eventPhoto1" />
 
               <div className=" space-y-5 px-1 ">
-                <p className=" text-[1.4rem] text-para3 mb-2 font-semibold">
+                <p className=" text-[1.4rem] text-para3  font-semibold">
                   Unlocking Creativity Through Photography{" "}
                 </p>
                 <div className="flex-grow flex flex-col justify-end">

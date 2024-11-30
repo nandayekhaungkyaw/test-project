@@ -23,11 +23,11 @@ const ContactUsPage = () => {
 
       <ContainerComponent className=" mx-auto lg:space-y-32 sm:space-y-20 space-y-10 ">
         <div className="grid grid-cols-4  lg:grid-cols-12 sm:grid-cols-8 md:grid-cols-8 justify-center  gap-x-5  gap-y-10">
-          <h1 className=" font-semibold sm:text-3xl lg:text-h1 md:text-4xl text-heading col-span-full text-center ">
+          <h1 className=" font-semibold  sm:text-3xl lg:text-h1 md:text-4xl text-heading text-2xl col-span-full text-center ">
             We’re here to Help You
           </h1>
           <div className=" lg:col-span-4 col-span-full sm:col-span-4 sm:col-start-3   bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" lg:text-3xl md:text-2xl sm:text-2xl  font-semibold text-heading text-center ">
+            <h3 className=" lg:text-3xl sm:text-2xl text-2xl  font-semibold text-heading text-center ">
               Customer Support
             </h3>
             <p className="flex  items-start justify-center">
@@ -53,7 +53,7 @@ const ContactUsPage = () => {
             </p>
           </div>
           <div className=" lg:col-span-4 col-span-full  sm:col-span-4 sm:col-start-3  bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl md:text-2xl sm:text-2xl  font-semibold text-heading text-center ">
+            <h3 className=" lg:text-3xl text-2xl sm:text-2xl  font-semibold text-heading text-center ">
               Contact Address
             </h3>
             <p className="flex  items-start justify-center">
@@ -79,7 +79,7 @@ const ContactUsPage = () => {
             </p>
           </div>{" "}
           <div className=" lg:col-span-4 col-span-full  sm:col-span-4 sm:col-start-3  bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
-            <h3 className=" text-3xl md:text-2xl sm:text-2xl  font-semibold text-heading text-center ">
+            <h3 className=" lg:text-3xl text-2xl sm:text-2xl  font-semibold text-heading text-center ">
               Main Office Address
             </h3>
             <p className="flex  items-start justify-center">
@@ -106,7 +106,7 @@ const ContactUsPage = () => {
           </div>
         </div>
         <div className="grid sm:grid-cols-8 lg:grid-cols-12 sm:gap-y-8 px-3  gap-x-5 items-stretch lg:gap-y-10">
-          <h1 className=" lg:text-h1  sm:text-h2 font-semibold col-span-full sm:col-span-full  text-center  text-heading">
+          <h1 className=" lg:text-h1  text-2xl sm:text-h2 font-semibold col-span-full sm:col-span-full  text-center  text-heading">
             Get In Touch
           </h1>
           <div className=" lg:col-span-5 sm:col-span-6 sm:justify-self-center sm:col-start-2">
