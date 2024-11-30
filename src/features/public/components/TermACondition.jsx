@@ -3,12 +3,12 @@ import { BsDot } from 'react-icons/bs'
 
 const TermACondition = ({title , description , number , lists}) => {
   return (
-<li>
-  <h2 className=' text-heading text-3xl font-semibold '>{number + 1}. {title}</h2>
-  <p className=' text-para4 font-hind text-para'> {description}</p>
-  {lists && <ul className=' ml-4 list-disc list-inside'>
-    {lists.map(el => <li className=' font-hind text-para text-para4'>{el}</li>)}
-  </ul>}
+<li className=' sm:space-y-4 space-y-2 '>
+  <h2 className=' text-heading  sm:text-xl lg:text-3xl font-semibold '>{number + 1}. {title}</h2>
+  <div className=' text-para4 text-sm  font-hind sm:text-paraTwo lg:text-para'> {description} <span> {lists && <ul className=' ml-2 sm:ml-4 list-disc list-inside'>
+    {lists.map(el => <li className=' font-hind lg:text-para text-sm sm:text-base text-para4'>{el}</li>)}
+  </ul>}</span></div>
+
 
 </li>
   )

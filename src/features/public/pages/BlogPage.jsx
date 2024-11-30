@@ -13,11 +13,14 @@ import { Link } from "react-router-dom";
 import { useBlogStore } from "../../../store/useBlogStore";
 import LandingSection from "../components/LandingSection";
 import hero from "../../../assets/blog/heroSection.png";
+import CardBlog from "../components/CardBlog";
+import { motion } from "framer-motion";
 
 const BlogPage = () => {
   const { blogs } = useBlogStore();
+  const CardBlogMotion = motion.create(CardBlog);
   return (
-    <main className="flex flex-col gap-section-spacing mb-28">
+    <main className="flex flex-col gap-10 sm:gap-20 lg:gap-section-spacing sm:mb-20 mb-10 lg:mb-32 ">
       <LandingSection name="Blog" imgPath={hero} />
 
       <ContainerComponent className={"flex flex-col gap-section-spacing"}>
@@ -26,8 +29,7 @@ const BlogPage = () => {
             {" "}
             Events and announcements
           </h2>
-
-          <Link
+          {/* <Link
             to={`/blog/${blogs[0].slug}`}
             className=" cursor-pointer flex flex-col gap-5 pb-4 col-span-full  lg:col-span-4  shadow border border-borderBlog rounded "
           >
@@ -48,50 +50,48 @@ const BlogPage = () => {
                 <p className=" text-para4 ">Mar 23, 2024</p>
               </div>
             </div>
-          </Link>
-
-          <Link
-            to={`/blog/${blogs[0].slug}`}
-            className=" col-span-full lg:col-span-4 cursor-pointer flex flex-col gap-5 pb-4 shadow rounded border border-borderBlog items-start"
-          >
-            <img src={event2Img} width="100%" alt="eventPhoto2" />
-            <div className="px-4 space-y-4 flex flex-col justify-between flex-grow  ">
-              <p className=" lg:text-xl font-semibold text-para4 ">
-                Introducing Pathway Academy’s 2024 Outstanding Enterprise
-                Customer Achievement Award Winners
-              </p>
-              <div>
-                <p className=" font-hind leading-6 text-para1 xl:block hidden line-clamp-3 ">
-                  {" "}
-                  Ready to dive into the world of development? Whether you're
+          </Link> */}{" "}
+          <CardBlogMotion
+            initial={{ opacity: 0, }}
+            whileInView={{ opacity: 1, }}
+            transition={{ duration: 0.9 }}
+            viewport={{ amount: 0.1 }}
+            img={event1Img}
+            href={`/blog/${blogs[0].slug}`}
+            title="10 entry-level Professional Certificates for the digital job
+                market"
+            descripton="We're excited to announce the expansion of our entry-level
+                  Professional Certificate portfolio with 10 new programs from
+                  industry partners. Pathway"
+            date="Mar 23, 2024"
+          />
+          <CardBlogMotion
+            initial={{ opacity: 0, }}
+            whileInView={{ opacity: 1, }}
+            transition={{ duration: 0.9 }}
+            viewport={{ amount: 0.1 }}
+            img={event1Img}
+            href={`/blog/${blogs[0].slug}`}
+            title=" Introducing Pathway Academy’s 2024 Outstanding Enterprise
+                Customer Achievement Award Winners"
+            descripton="   Ready to dive into the world of development? Whether you're
                   aiming to build websites, mobile apps, or software, this guide
-                  .......
-                </p>
-
-                <p className=" text-para4 ">Mar 23, 2024</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to={`/blog/${blogs[0].slug}`}
-            className=" cursor-pointer col-span-full lg:col-span-4 flex flex-col  gap-5 pb-4 shadow rounded border border-borderBlog items-start"
-          >
-            <img src={event3Img} width="100%" alt="eventPhoto3" />
-            <div className="px-4 space-y-4 flex flex-col justify-between flex-grow ">
-              <p className=" font-semibold lg:text-xl text-para4 ">
-                "AI Grading: Faster, Quality Feedback on Pathway Academy
-              </p>
-              <div>
-                {" "}
-                <p className=" font-hind leading-6z text-para1 xl:block hidden line-clamp-3 ">
-                  Ready to dive into the world of development? Whether you're
+                  ......."
+            date="Mar 23, 2024"
+          />
+          <CardBlogMotion
+            initial={{ opacity: 0, }}
+            whileInView={{ opacity: 1,  }}
+            transition={{ duration: 0.9 }}
+            viewport={{ amount: 0.1 }}
+            img={event1Img}
+            href={`/blog/${blogs[0].slug}`}
+            title="AI Grading: Faster, Quality Feedback on Pathway Academy"
+            descripton=" Ready to dive into the world of development? Whether you're
                   aiming to build websites, mobile apps, or software, this guide
-                  .......
-                </p>
-                <p className=" text-para4 ">July 1, 2024</p>
-              </div>
-            </div>
-          </Link>
+                  ......."
+            date="July 1, 2024"
+          />
         </div>
         <div className=" space-y-10">
           <h1 className=" font-semibold text-2xl sm:text-4xl text-center text-heading">
