@@ -6,16 +6,23 @@ import event1Img from "../../../assets/blog/events/event-1.png";
 import LatestBlog4 from "../../../assets/blog/latestBlog/blog-4.png";
 import LatestBlog5 from "../../../assets/blog/latestBlog/blog-5.png";
 import LatestBlog6 from "../../../assets/blog/latestBlog/blog-6.png";
+import { easeIn, motion } from "framer-motion";
 
 import ShowDate from "../components/ShowDate";
+import LatestBlogCard from "../components/LatestBlogCard";
 
 const BlogDetailPage = () => {
   const { blogSlug } = useParams();
   const { blogs } = useBlogStore();
   const currentElementIndex = blogs.findIndex((el) => el.slug === blogSlug);
-
+const LatestBlogCardMotion = motion.create(LatestBlogCard)
   return (
-    <section className=" lg:space-y-section-spacing sm:space-y-20 space-y-10 lg:mb-32 mb-10 sm:mb-20">
+    <motion.section
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 0.6 , ease : easeIn }}
+      className=" lg:space-y-section-spacing sm:space-y-20 space-y-10 lg:mb-32 mb-10 sm:mb-20"
+    >
       <section className="  lg:grid-rows-[420px] grid-rows-[200px] md:grid-rows-[274px] items-center justify-center  grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12  gap-5 bg-bg1">
         <div className=" col-span-full lg:col-span-8  lg:col-start-3 lg:px-9 px-5  space-y-2 lg:space-y-4 mx-auto">
           <ShowDate date={blogs[currentElementIndex].date} />
@@ -166,84 +173,16 @@ const BlogDetailPage = () => {
             Related Blogs
           </h1>
 
-          <Link
-            to={`/blog/${blogs[0].slug}`}
-            className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-          >
-            <img className="" src={LatestBlog4} alt="eventPhoto1" />
-
-            <div className=" space-y-5 px-1 ">
-              <p className=" text-[1.4rem] text-para3  font-semibold">
-                Designing Your First Portfolio Website{" "}
-              </p>
-              <div className="flex-grow flex flex-col justify-end">
-                <p className=" font-hind text-para1 line-clamp-2 ">
-                  Learn the essential steps to design a professional portfolio
-                  that highlights your expertise and attracts opportunities.
-                </p>
-              </div>
-              <div className="flex justify-between border-t items-center border-para2 py-2">
-                <h3 className=" text-heading font-hind font-medium text-2xl">
-                  Ms. Olivia Parker
-                </h3>
-                <p className=" text-para1 font-hind">Nov 13 2024</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to={`/blog/${blogs[0].slug}`}
-            className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-          >
-            <img className="" src={LatestBlog5} alt="eventPhoto1" />
-
-            <div className=" flex flex-col gap-5 flex-grow   px-1 ">
-              <p className=" text-[1.4rem] font-sans text-para3  font-semibold">
-                Web Development Trends to Watch{" "}
-              </p>
-              <div className="flex-grow flex flex-col justify-end">
-                <p className="font-hind mt-auto text-para1 line-clamp-2 ">
-                  Stay ahead in the fast-paced tech industry with this guide to
-                  the top tools and frameworks for 2024.
-                </p>
-              </div>
-
-              <div className="flex justify-between  border-t border-para2 py-2">
-                <h3 className=" text-heading font-hind font-medium text-2xl">
-                  Mr. Ethan
-                </h3>
-                <p className=" text-para1 font-hind">March 10 2024</p>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to={`/blog/${blogs[0].slug}`}
-            className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-          >
-            <img className="" src={LatestBlog6} alt="eventPhoto1" />
-
-            <div className=" space-y-5 px-1 ">
-              <p className=" text-[1.4rem] text-para3  font-semibold">
-                Unlocking Creativity Through Photography{" "}
-              </p>
-              <div className="flex-grow flex flex-col justify-end">
-                <p className=" font-hind text-para1 line-clamp-2 ">
-                  Master the art of photography with practical tips on
-                  composition, lighting, and storytelling for breathtaking
-                  images.
-                </p>
-              </div>
-
-              <div className="flex justify-between border-t items-center border-para2 py-2">
-                <h3 className=" text-heading font-hind font-medium text-2xl">
-                  Ms. Sophia
-                </h3>
-                <p className=" text-para1 font-hind">Feb 13 2024</p>
-              </div>
-            </div>
-          </Link>
+          <LatestBlogCardMotion initial={{opacity : 0 , y : 30 ,}}  whileInView={ {opacity : 1 , y : 0 , transition  : {duration : 0.7 , }}} img={LatestBlog4} href={`/blog/${blogs[0].slug}`} title="Designing Your First Portfolio Website" descripton="Learn the essential steps to design a professional portfolio
+                    that highlights your expertise and attracts opportunities." author="Ms. Olivia Parker" date="Nov 13 2024" />
+       
+            <LatestBlogCardMotion initial={{opacity : 0 , y : 30 ,}}  whileInView={ {opacity : 1 , y : 0 , transition  : {duration : 0.7 , }}} img={LatestBlog5} href={`/blog/${blogs[0].slug}`} title="Web Development Trends to Watch" descripton="Stay ahead in the fast-paced tech industry with this guide
+                    to the top tools and frameworks for 2024." author="Mr.Ethan" date="Nov 13 2024" />
+       
+            <LatestBlogCardMotion initial={{opacity : 0 , y : 30 ,}}  whileInView={ {opacity : 1 , y : 0 , transition  : {duration : 0.7 , }}} img={LatestBlog6} href={`/blog/${blogs[0].slug}`} title="Unlocking Creativity Through Photography" descripton="Unlocking Creativity Through Photography." author="Ms. Sophia" date="Nov 13 2024" />
         </div>
       </ContainerComponent>
-    </section>
+    </motion.section>
   );
 };
 

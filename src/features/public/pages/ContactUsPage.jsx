@@ -15,17 +15,174 @@ import YTicon from "../components/YTicon";
 import TwitterIcon from "../components/TwitterIcon";
 import Linkedinicon from "../components/Linkedinicon";
 import IGicon from "../components/IGicon";
-import { Link } from "react-router-dom";
+import { easeInOut, easeOut, motion } from "framer-motion";
 const ContactUsPage = () => {
+  const cube = {
+    width: "100%",
+    height: "100%",
+    perspective: "550px",
+    perspectiveOrigin: "center",
+    transformStyle: "preserve-3d",
+    transformOrigin: "center",
+    position: "relative",
+  };
+
+  const face = {
+    backfaceVisibility: "hidden",
+    display: "block",
+    position: "absolute",
+    width: "16px",
+    height: "16px",
+    border: "none",
+
+    fontFamily: "sans-serif",
+    fontSize: "60px",
+    color: "white",
+    textAlign: "center",
+  };
+  const front = {
+    background: "rgb(0 0 0 / 30%)",
+    transform: "translateZ(50px)",
+  };
+  const back = {
+    background: "rgb(0 255 0 / 100%)",
+    color: "black",
+    transform: "rotateY(180deg) translateZ(-50px)",
+  };
+  const top = {
+    background: "rgb(196 196 0 / 70%)",
+    transform: "rotateX(90deg) translateZ(50px)",
+  };
+  const bottom = {
+    background: "rgb(196 0 196 / 70%)",
+    transform: "rotateX(-90deg) translateZ(50px)",
+  };
+
   return (
     <section className=" lg:space-y-32  sm:mb-20  mb-10 space-y-10 lg:mb-32">
       <LandingSection name="Contact us" imgPath={hero} />
 
       <ContainerComponent className=" mx-auto lg:space-y-32 sm:space-y-20 space-y-10 ">
         <div className="grid grid-cols-4  lg:grid-cols-12 sm:grid-cols-8 md:grid-cols-8 justify-center  gap-x-5  gap-y-10">
-          <h1 className=" font-semibold  sm:text-3xl lg:text-h1 md:text-4xl text-heading text-2xl col-span-full text-center ">
-            We’re here to Help You
-          </h1>
+          {/* <motion.div
+            style={{
+              width: "100%",
+              height: "auto",
+              transformStyle: "preserve-3d",
+              transform: "rotate3d(0, 0, 0, 0deg)",
+            }}
+            initial={{ rotateX: 180, scale: 0.5 }}
+            whileInView={{
+              rotateX: 0,
+              scale: 1,
+              transition: { duration: 0.4 },
+            }}
+            className="    "
+          >
+            <h1
+              style={{
+                ...commonCss,
+                background: "rgb(90 90 90 / 70%)",
+                transform: "translateZ(50px)",
+              }}
+              className=""
+            >
+              We’re here to Help You
+            </h1>
+            <h1
+              style={{
+                background: "rgb(0 210 0 / 70%)",
+                transform: "translateZ(50px) rotateY(180deg)",
+              }}
+            >
+              We’re here to Help You
+            </h1>
+            <h1
+              style={{
+                background: "rgb(210 210 0 / 70%)",
+                transform: "translateZ(50px)  rotateX(90deg)",
+              }}
+            >
+              We’re here to Help You
+            </h1>
+            <h1
+              style={{
+                background: "rgb(210 0 210 / 70%)",
+                transform: "translateZ(50px) rotateX(-90deg)",
+              }}
+            >
+              We’re here to Help You
+            </h1>
+          </motion.div> */}
+          {/* <motion.div  style={{...cube ,  }} >
+            <h1 style={ {...face , ...front} } >1</h1>
+            <h1 style={{ ...face , ...back}} >2</h1>
+            <h1 style={{ ...face , ...top}} >3</h1>
+            <h1 style={{ ...face , ...bottom}} >4</h1>
+          </motion.div> */}
+          <div
+            className="hidden lg:block  col-span-full"
+            style={{ perspective: "1000px" }}
+          >
+            <motion.div
+              whileInView={{
+                rotateX: 180,
+                transition: {
+                  type: "spring",
+                  stiffness: 100, // Controls the "strength" of the spring
+                  damping: 9,
+                  duration: 0.9,
+                  ease: "easeIn",
+                },
+              }}
+              initial={{ rotateX: 0 }}
+              style={{ transformStyle: "preserve-3d" }}
+              className=" relative h-12  w-full  "
+            >
+              <h1
+                style={{
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(-24px) rotateX(180deg)",
+                }}
+                className=" font-semibold   sm:text-3xl lg:text-h1 md:text-4xl text-heading text-2xl col-span-full text-center absolute w-full h-full flex justify-center items-center bg-white"
+              >
+                We’re here to Help You
+              </h1>
+              <h1
+                style={{
+                  backfaceVisibility: "hidden",
+                  transformOrigin: "top",
+                  transform: " translateZ(-24px) rotateX(90deg) ",
+                }}
+                className=" font-semibold   sm:text-3xl lg:text-h1 md:text-4xl text-heading text-2xl col-span-full text-center z-10 absolute w-full h-full flex justify-center items-center  bg-white -translate-y-[20px] "
+              >
+                We’re here to Help You
+              </h1>
+              <h1
+                style={{
+                  backfaceVisibility: "hidden",
+                  transformOrigin: "bottom",
+                  transform: " translateZ(-24px) rotateX(-90deg) ",
+                }}
+                className="font-semibold   sm:text-3xl lg:text-h1 md:text-4xl text-heading text-2xl col-span-full text-center absolute w-full h-full  flex justify-center items-center  bg-white translate-y-[20px] "
+              >
+                We’re here to Help You
+              </h1>
+              <h1
+                style={{
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(16px) ",
+                }}
+                className=" font-semibold   sm:text-3xl lg:text-h1 md:text-4xl text-heading text-2xl col-span-full text-center z-10 absolute w-full  h-full flex justify-center items-center bg-white "
+              >
+                We’re here to Help You
+              </h1>
+            </motion.div>
+           
+          </div>
+          <h1 className=" lg:hidden col-span-full sm:text-3xl  md:text-4xl  font-semibold    text-heading text-2xl text-center  w-full h-full bg-white">
+              We’re here to Help You 
+            </h1>   
           <div className=" lg:col-span-4 col-span-full sm:col-span-4 sm:col-start-3   bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
             <h3 className=" lg:text-3xl sm:text-2xl text-2xl  font-semibold text-heading text-center ">
               Customer Support
@@ -112,11 +269,13 @@ const ContactUsPage = () => {
           <div className=" lg:col-span-5 sm:col-span-6 sm:justify-self-center sm:col-start-2">
             <img src={getInTouchImg} width="100%" alt="getInTouchImg" />
           </div>
-         <div className=" flex flex-col sm:col-span-full gap-5 py-2 lg:col-span-6 sm:px-12 md:px-14   lg:col-start-7">
+          <div className=" flex flex-col sm:col-span-full gap-5 py-2 lg:col-span-6 sm:px-12 md:px-14   lg:col-start-7">
             <div className="flex gap-5 ">
               {" "}
               <div className="flex flex-col gap-2 flex-grow">
-                <label className=" font-kite" htmlFor="nameForContactForm">Name</label>
+                <label className=" font-kite" htmlFor="nameForContactForm">
+                  Name
+                </label>
                 <input
                   id="nameForContactForm"
                   className="  flex    w-full rounded-lg border border-paraTertiary  px-3 py-2
@@ -128,7 +287,9 @@ const ContactUsPage = () => {
                 />
               </div>{" "}
               <div className="flex flex-col gap-2 flex-grow">
-                <label className=" font-kite" htmlFor="emailForContactForm">Email</label>
+                <label className=" font-kite" htmlFor="emailForContactForm">
+                  Email
+                </label>
                 <input
                   id="emailForContactForm"
                   className="  flex    w-full rounded-md border border-paraTertiary  px-3 py-2
@@ -141,7 +302,9 @@ const ContactUsPage = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2 ">
-              <label className=" font-kite" htmlFor="phoneForContactForm">Phone</label>
+              <label className=" font-kite" htmlFor="phoneForContactForm">
+                Phone
+              </label>
               <input
                 id="phoneForContactForm"
                 className="  flex     w-full rounded-lg border border-paraTertiary  px-3 py-2
@@ -153,10 +316,11 @@ const ContactUsPage = () => {
               />
             </div>
             <div className="flex flex-col flex-grow gap-2 ">
-              <label className=" font-kite" htmlFor="messageForContactForm">Message</label>
+              <label className=" font-kite" htmlFor="messageForContactForm">
+                Message
+              </label>
               <textarea
-              rows="4"
-              
+                rows="4"
                 className=" flex-grow rounded-lg px-4 py-3 w-full flex border border-paraTertiary
                             ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium 
                             placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 
@@ -219,7 +383,6 @@ const ContactUsPage = () => {
                   />
                 </a>
                 <a href="#">
-               
                   <YTicon
                     className=" p-2 rounded-md  bg-para4 "
                     width="32"
@@ -229,7 +392,7 @@ const ContactUsPage = () => {
                 </a>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
         <div className=" col-span-full  lg:h-[478px] h-[250px] sm:h-[337px] ">
           <iframe

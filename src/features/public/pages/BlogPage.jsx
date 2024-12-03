@@ -15,20 +15,52 @@ import LandingSection from "../components/LandingSection";
 import hero from "../../../assets/blog/heroSection.png";
 import CardBlog from "../components/CardBlog";
 import { motion } from "framer-motion";
+import { DotSquareIcon } from "lucide-react";
+import LatestBlogCard from "../components/LatestBlogCard";
 
 const BlogPage = () => {
   const { blogs } = useBlogStore();
   const CardBlogMotion = motion.create(CardBlog);
+
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+  
+  const listItem = {
+    hidden: { opacity: 0 , y : 30 },
+    show: { opacity: 1 , y : 0 , transition : {
+      duration : 0.5 ,
+      type: 'spring',
+      stiffness: 100,
+      damping: 50,
+    } }
+  };
+
   return (
     <main className="flex flex-col gap-10 sm:gap-20 lg:gap-section-spacing sm:mb-20 mb-10 lg:mb-32 ">
       <LandingSection name="Blog" imgPath={hero} />
-
-      <ContainerComponent className={"flex flex-col gap-section-spacing"}>
-        <div className=" grid grid-cols-4 lg:grid-cols-12 sm:grid-cols-8 gap-x-5 gap-y-10  auto-rows-min ">
-          <h2 className=" col-span-full font-semibold text-heading sm:text-4xl text-2xl justify-self-center self-center ">
+         <h2 className="  font-semibold text-heading sm:text-4xl text-2xl self-center ">
             {" "}
             Events and announcements
           </h2>
+
+      <ContainerComponent className={"flex flex-col gpa-10 sm:gap-20  lg:gap-section-spacing"}>
+        <motion.div
+   variants={container}
+   initial="hidden"
+   whileInView="show"
+   viewport={{ amount : 0.1}}
+
+          className=" grid grid-cols-4 lg:grid-cols-12 sm:grid-cols-8 gap-x-5 gap-y-10  auto-rows-min "
+        >
+       
           {/* <Link
             to={`/blog/${blogs[0].slug}`}
             className=" cursor-pointer flex flex-col gap-5 pb-4 col-span-full  lg:col-span-4  shadow border border-borderBlog rounded "
@@ -52,10 +84,14 @@ const BlogPage = () => {
             </div>
           </Link> */}{" "}
           <CardBlogMotion
-            initial={{ opacity: 0, }}
-            whileInView={{ opacity: 1, }}
-            transition={{ duration: 0.9 }}
-            viewport={{ amount: 0.1 }}
+          
+            className="cardMotion"
+            variants={listItem}
+          
+           
+          
+        
+        
             img={event1Img}
             href={`/blog/${blogs[0].slug}`}
             title="10 entry-level Professional Certificates for the digital job
@@ -66,10 +102,10 @@ const BlogPage = () => {
             date="Mar 23, 2024"
           />
           <CardBlogMotion
-            initial={{ opacity: 0, }}
-            whileInView={{ opacity: 1, }}
-            transition={{ duration: 0.9 }}
-            viewport={{ amount: 0.1 }}
+            className="cardMotion"
+            variants={listItem}
+          
+       
             img={event1Img}
             href={`/blog/${blogs[0].slug}`}
             title=" Introducing Pathway Academy’s 2024 Outstanding Enterprise
@@ -80,10 +116,10 @@ const BlogPage = () => {
             date="Mar 23, 2024"
           />
           <CardBlogMotion
-            initial={{ opacity: 0, }}
-            whileInView={{ opacity: 1,  }}
-            transition={{ duration: 0.9 }}
-            viewport={{ amount: 0.1 }}
+            className="cardMotion"
+            variants={listItem}
+          
+
             img={event1Img}
             href={`/blog/${blogs[0].slug}`}
             title="AI Grading: Faster, Quality Feedback on Pathway Academy"
@@ -92,169 +128,33 @@ const BlogPage = () => {
                   ......."
             date="July 1, 2024"
           />
-        </div>
-        <div className=" space-y-10">
-          <h1 className=" font-semibold text-2xl sm:text-4xl text-center text-heading">
+        </motion.div>
+        <div  className=" space-y-10 ">
+          <h1  className=" font-semibold text-2xl sm:text-4xl text-center text-heading">
             Our Latest Blogs
           </h1>
-          <div className=" grid grid-cols-4  sm:grid-cols-8 lg:grid-cols-12 gap-y-10 gap-x-5">
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" col-span-full lg:col-span-4  flex flex-col rounded shadow gap-5 border  border-borderBlog"
-            >
-              <img
-                className=""
-                width="100%"
-                src={LatestBlog1}
-                alt="eventPhoto1"
-              />
-
-              <div className=" space-y-5 sm:px-1 px-2 flex flex-col flex-grow justify-center ">
-                <p className=" text-xl text-para3   font-semibold">
-                  Essential Skills to Kickstart Your Development Journey
-                </p>
-                <div className="flex-grow flex flex-col justify-end">
-                  <p className=" font-hind text-para1 line-clamp-2 ">
-                    Ready to dive into the world of development? Whether you're
+          <motion.div  initial={{opacity : 0 ,  y : 20 }} whileInView={{opacity : 1, y : 0 , transition : {duration : 0.5 }}} viewport={{amount : 0.1 , once : true}}  className=" grid grid-cols-4  sm:grid-cols-8 lg:grid-cols-12 gap-y-10 gap-x-5">
+           
+            <LatestBlogCard img={LatestBlog1} href={`/blog/${blogs[0].slug}`} title="Essential Skills to Kickstart Your Development Journey" descripton="Ready to dive into the world of development? Whether you're
                     aiming to build websites, mobile apps, or software, this
-                    guide
-                  </p>
-                </div>
-
-                <div className="flex justify-between border-t items-center border-para2 py-2">
-                  <h3 className=" text-heading font-hind font-medium text-2xl">
-                    Ms.Ella
-                  </h3>
-                  <p className=" text-para1 font-hind">Nov 13 2024</p>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-            >
-              <img className="" src={LatestBlog2} alt="eventPhoto1" />
-
-              <div className=" space-y-5 px-2 sm:px-1 ">
-                <p className="  text-xl font-sans text-para3 font-semibold">
-                  Revolutionizing the Business Landscape
-                </p>
-                <div className="flex-grow flex flex-col justify-end">
-                  <p className=" font-hind text-para1 line-clamp-2 ">
-                    Discover the latest trends shaping the business world and
-                    learn how to adapt your strategy to stay ahead in 2024.
-                  </p>
-                </div>
-
-                <div className="flex justify-between border-t items-center border-para2 py-2">
-                  <h3 className=" text-heading font-hind font-medium text-2xl">
-                    Ms. Sophia Martinez
-                  </h3>
-                  <p className=" text-para1 font-hind">Nov 13 2024</p>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className="col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-            >
-              <img className="" src={LatestBlog3} alt="eventPhoto1" />
-
-              <div className=" space-y-5 sm:px-1 px-2 flex flex-col flex-grow justify-center">
-                <p className=" text-xl text-para3  font-semibold">
-                  Finding Work-Life Balance in Online Learning
-                </p>
-                <div className="flex-grow flex flex-col justify-end">
-                  <p className=" font-hind text-para1 line-clamp-2 ">
-                    Struggling to balance work, family, and learning? Discover
-                    practical ways to stay productive and stress-free.
-                  </p>
-                </div>
-
-                <div className="flex justify-between border-t items-center border-para2 py-2">
-                  <h3 className=" text-heading font-hind font-medium text-2xl">
-                    Mr. Alex
-                  </h3>
-                  <p className=" text-para1 font-hind">Nov 13 2024</p>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-            >
-              <img className="" src={LatestBlog4} alt="eventPhoto1" />
-
-              <div className=" space-y-5 px-1 ">
-                <p className=" text-[1.4rem] text-para3  font-semibold">
-                  Designing Your First Portfolio Website{" "}
-                </p>
-                <div className="flex-grow flex flex-col justify-end">
-                  <p className=" font-hind text-para1 line-clamp-2 ">
-                    Learn the essential steps to design a professional portfolio
-                    that highlights your expertise and attracts opportunities.
-                  </p>
-                </div>
-                <div className="flex justify-between border-t items-center border-para2 py-2">
-                  <h3 className=" text-heading font-hind font-medium text-2xl">
-                    Ms. Olivia Parker
-                  </h3>
-                  <p className=" text-para1 font-hind">Nov 13 2024</p>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-            >
-              <img className="" src={LatestBlog5} alt="eventPhoto1" />
-
-              <div className=" flex flex-col gap-5 flex-grow   px-1 ">
-                <p className=" text-[1.4rem] font-sans text-para3  font-semibold">
-                  Web Development Trends to Watch{" "}
-                </p>
-                <div className="flex-grow flex flex-col justify-end">
-                  <p className="font-hind mt-auto text-para1 line-clamp-2 ">
-                    Stay ahead in the fast-paced tech industry with this guide
-                    to the top tools and frameworks for 2024.
-                  </p>
-                </div>
-
-                <div className="flex justify-between  border-t border-para2 py-2">
-                  <h3 className=" text-heading font-hind font-medium text-2xl">
-                    Mr. Ethan
-                  </h3>
-                  <p className=" text-para1 font-hind">March 10 2024</p>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={`/blog/${blogs[0].slug}`}
-              className=" col-span-full lg:col-span-4 flex flex-col rounded shadow gap-5 border border-borderBlog"
-            >
-              <img className="" src={LatestBlog6} alt="eventPhoto1" />
-
-              <div className=" space-y-5 px-1 ">
-                <p className=" text-[1.4rem] text-para3  font-semibold">
-                  Unlocking Creativity Through Photography{" "}
-                </p>
-                <div className="flex-grow flex flex-col justify-end">
-                  <p className=" font-hind text-para1 line-clamp-2 ">
-                    Master the art of photography with practical tips on
-                    composition, lighting, and storytelling for breathtaking
-                    images.
-                  </p>
-                </div>
-
-                <div className="flex justify-between border-t items-center border-para2 py-2">
-                  <h3 className=" text-heading font-hind font-medium text-2xl">
-                    Ms. Sophia
-                  </h3>
-                  <p className=" text-para1 font-hind">Feb 13 2024</p>
-                </div>
-              </div>
-            </Link>
-          </div>
+                    guide" author="Ms.Ella" date="Nov 13 2024" />
+           
+            <LatestBlogCard img={LatestBlog2} href={`/blog/${blogs[0].slug}`} title=" Revolutionizing the Business Landscape" descripton="Ready to dive into the world of development? Whether you're
+                    aiming to build websites, mobile apps, or software, this
+                    guide" author="Ms. Sophia Martinez" date="Nov 13 2024" />
+         
+            <LatestBlogCard img={LatestBlog3} href={`/blog/${blogs[0].slug}`} title="Finding Work-Life Balance in Online Learning" descripton="Struggling to balance work, family, and learning? Discover
+                    practical ways to stay productive and stress-free." author="Mr. Alex" date="Nov 13 2024" />
+        
+            <LatestBlogCard img={LatestBlog4} href={`/blog/${blogs[0].slug}`} title="Designing Your First Portfolio Website" descripton="Learn the essential steps to design a professional portfolio
+                    that highlights your expertise and attracts opportunities." author="Ms. Olivia Parker" date="Nov 13 2024" />
+       
+            <LatestBlogCard img={LatestBlog5} href={`/blog/${blogs[0].slug}`} title="Web Development Trends to Watch" descripton="Stay ahead in the fast-paced tech industry with this guide
+                    to the top tools and frameworks for 2024." author="Mr.Ethan" date="Nov 13 2024" />
+       
+            <LatestBlogCard img={LatestBlog6} href={`/blog/${blogs[0].slug}`} title="Unlocking Creativity Through Photography" descripton="Unlocking Creativity Through Photography." author="Ms. Sophia" date="Nov 13 2024" />
+            
+          </motion.div>
         </div>
       </ContainerComponent>
     </main>
