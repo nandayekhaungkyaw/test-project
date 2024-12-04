@@ -9,8 +9,8 @@ import ContainerComponent from "../../../components/ContainerComponent";
 
 const Header = () => {
   return (
-    <header className="">
-      <ContainerComponent className={"flex justify-between items-center py-3"}>
+    <header className=" sticky top-0 left-0 bg-white z-50 ">
+      <ContainerComponent className={"flex justify-between items-center py-3    "}>
         <div className="">
           <Link to="/home">
             <Logo className={"h-12"} />
@@ -48,9 +48,9 @@ const Header = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>
