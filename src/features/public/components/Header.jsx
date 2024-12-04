@@ -9,8 +9,8 @@ import ContainerComponent from "../../../components/ContainerComponent";
 
 const Header = () => {
   return (
-    <header className=" sticky top-0 left-0 bg-white z-50 ">
-      <ContainerComponent className={"flex justify-between items-center py-3    "}>
+    <header className="">
+      <ContainerComponent className={"flex justify-between items-center py-3"}>
         <div className="">
           <Link to="/home">
             <Logo className={"h-12"} />
