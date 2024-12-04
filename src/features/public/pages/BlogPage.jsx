@@ -22,76 +22,52 @@ const BlogPage = () => {
   const { blogs } = useBlogStore();
   const CardBlogMotion = motion.create(CardBlog);
 
-
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
-      }
-    }
+        staggerChildren: 0.3,
+      },
+    },
   };
-  
+
   const listItem = {
-    hidden: { opacity: 0 , y : 30 },
-    show: { opacity: 1 , y : 0 , transition : {
-      duration : 0.5 ,
-      type: 'spring',
-      stiffness: 100,
-      damping: 50,
-    } }
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        type: "spring",
+        stiffness: 100,
+        damping: 50,
+      },
+    },
   };
 
   return (
     <main className="flex flex-col gap-10 sm:gap-20 lg:gap-section-spacing sm:mb-20 mb-10 lg:mb-32 ">
       <LandingSection name="Blog" imgPath={hero} />
-         <h2 className="  font-semibold text-heading sm:text-4xl text-2xl self-center ">
-            {" "}
-            Events and announcements
-          </h2>
+      <h2 className="  font-semibold text-heading sm:text-4xl text-2xl self-center ">
+        {" "}
+        Events and announcements
+      </h2>
 
-      <ContainerComponent className={"flex flex-col gpa-10 sm:gap-20  lg:gap-section-spacing"}>
+      <ContainerComponent
+        className={"flex flex-col gpa-10 sm:gap-20  lg:gap-section-spacing"}
+      >
         <motion.div
-   variants={container}
-   initial="hidden"
-   whileInView="show"
-   viewport={{ amount : 0.1}}
-
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ amount: 0.1 }}
           className=" grid grid-cols-4 lg:grid-cols-12 sm:grid-cols-8 gap-x-5 gap-y-10  auto-rows-min "
         >
-       
-          {/* <Link
-            to={`/blog/${blogs[0].slug}`}
-            className=" cursor-pointer flex flex-col gap-5 pb-4 col-span-full  lg:col-span-4  shadow border border-borderBlog rounded "
-          >
-            <img className="" width="100%" src={event1Img} alt="eventPhoto1" />
-
-            <div className=" px-4 space-y-4 flex flex-col justify-between flex-grow  ">
-              <p className=" lg:text-xl font-semibold text-para4 ">
-                10 entry-level Professional Certificates for the digital job
-                market
-              </p>
-              <div>
-                {" "}
-                <p className=" font-hind leading-6 text-para1 xl:block hidden line-clamp-3  ">
-                  We're excited to announce the expansion of our entry-level
-                  Professional Certificate portfolio with 10 new programs from
-                  industry partners. Pathway{" "}
-                </p>
-                <p className=" text-para4 ">Mar 23, 2024</p>
-              </div>
-            </div>
-          </Link> */}{" "}
+      
           <CardBlogMotion
-          
             className="cardMotion"
             variants={listItem}
-          
-           
-          
-        
-        
             img={event1Img}
             href={`/blog/${blogs[0].slug}`}
             title="10 entry-level Professional Certificates for the digital job
@@ -104,8 +80,6 @@ const BlogPage = () => {
           <CardBlogMotion
             className="cardMotion"
             variants={listItem}
-          
-       
             img={event1Img}
             href={`/blog/${blogs[0].slug}`}
             title=" Introducing Pathway Academy’s 2024 Outstanding Enterprise
@@ -118,8 +92,6 @@ const BlogPage = () => {
           <CardBlogMotion
             className="cardMotion"
             variants={listItem}
-          
-
             img={event1Img}
             href={`/blog/${blogs[0].slug}`}
             title="AI Grading: Faster, Quality Feedback on Pathway Academy"
@@ -129,31 +101,76 @@ const BlogPage = () => {
             date="July 1, 2024"
           />
         </motion.div>
-        <div  className=" space-y-10 ">
-          <h1  className=" font-semibold text-2xl sm:text-4xl text-center text-heading">
+        <div className=" space-y-10 ">
+          <h1 className=" font-semibold text-2xl sm:text-4xl text-center text-heading">
             Our Latest Blogs
           </h1>
-          <motion.div  initial={{opacity : 0 ,  y : 20 }} whileInView={{opacity : 1, y : 0 , transition : {duration : 0.5 }}} viewport={{amount : 0.1 , once : true}}  className=" grid grid-cols-4  sm:grid-cols-8 lg:grid-cols-12 gap-y-10 gap-x-5">
-           
-            <LatestBlogCard img={LatestBlog1} href={`/blog/${blogs[0].slug}`} title="Essential Skills to Kickstart Your Development Journey" descripton="Ready to dive into the world of development? Whether you're
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+            viewport={{ amount: 0.1, once: true }}
+            className=" grid grid-cols-4  sm:grid-cols-8 lg:grid-cols-12 gap-y-10 gap-x-5"
+          >
+            <LatestBlogCard
+              img={LatestBlog1}
+              href={`/blog/${blogs[0].slug}`}
+              title="Essential Skills to Kickstart Your Development Journey"
+              descripton="Ready to dive into the world of development? Whether you're
                     aiming to build websites, mobile apps, or software, this
-                    guide" author="Ms.Ella" date="Nov 13 2024" />
-           
-            <LatestBlogCard img={LatestBlog2} href={`/blog/${blogs[0].slug}`} title=" Revolutionizing the Business Landscape" descripton="Ready to dive into the world of development? Whether you're
+                    guide"
+              author="Ms.Ella"
+              date="Nov 13 2024"
+            />
+
+            <LatestBlogCard
+              img={LatestBlog2}
+              href={`/blog/${blogs[0].slug}`}
+              title=" Revolutionizing the Business Landscape"
+              descripton="Ready to dive into the world of development? Whether you're
                     aiming to build websites, mobile apps, or software, this
-                    guide" author="Ms. Sophia Martinez" date="Nov 13 2024" />
-         
-            <LatestBlogCard img={LatestBlog3} href={`/blog/${blogs[0].slug}`} title="Finding Work-Life Balance in Online Learning" descripton="Struggling to balance work, family, and learning? Discover
-                    practical ways to stay productive and stress-free." author="Mr. Alex" date="Nov 13 2024" />
-        
-            <LatestBlogCard img={LatestBlog4} href={`/blog/${blogs[0].slug}`} title="Designing Your First Portfolio Website" descripton="Learn the essential steps to design a professional portfolio
-                    that highlights your expertise and attracts opportunities." author="Ms. Olivia Parker" date="Nov 13 2024" />
-       
-            <LatestBlogCard img={LatestBlog5} href={`/blog/${blogs[0].slug}`} title="Web Development Trends to Watch" descripton="Stay ahead in the fast-paced tech industry with this guide
-                    to the top tools and frameworks for 2024." author="Mr.Ethan" date="Nov 13 2024" />
-       
-            <LatestBlogCard img={LatestBlog6} href={`/blog/${blogs[0].slug}`} title="Unlocking Creativity Through Photography" descripton="Unlocking Creativity Through Photography." author="Ms. Sophia" date="Nov 13 2024" />
-            
+                    guide"
+              author="Ms. Sophia Martinez"
+              date="Nov 13 2024"
+            />
+
+            <LatestBlogCard
+              img={LatestBlog3}
+              href={`/blog/${blogs[0].slug}`}
+              title="Finding Work-Life Balance in Online Learning"
+              descripton="Struggling to balance work, family, and learning? Discover
+                    practical ways to stay productive and stress-free."
+              author="Mr. Alex"
+              date="Nov 13 2024"
+            />
+
+            <LatestBlogCard
+              img={LatestBlog4}
+              href={`/blog/${blogs[0].slug}`}
+              title="Designing Your First Portfolio Website"
+              descripton="Learn the essential steps to design a professional portfolio
+                    that highlights your expertise and attracts opportunities."
+              author="Ms. Olivia Parker"
+              date="Nov 13 2024"
+            />
+
+            <LatestBlogCard
+              img={LatestBlog5}
+              href={`/blog/${blogs[0].slug}`}
+              title="Web Development Trends to Watch"
+              descripton="Stay ahead in the fast-paced tech industry with this guide
+                    to the top tools and frameworks for 2024."
+              author="Mr.Ethan"
+              date="Nov 13 2024"
+            />
+
+            <LatestBlogCard
+              img={LatestBlog6}
+              href={`/blog/${blogs[0].slug}`}
+              title="Unlocking Creativity Through Photography"
+              descripton="Unlocking Creativity Through Photography."
+              author="Ms. Sophia"
+              date="Nov 13 2024"
+            />
           </motion.div>
         </div>
       </ContainerComponent>

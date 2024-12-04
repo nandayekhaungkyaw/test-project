@@ -4,7 +4,7 @@ const PrimaryBtn = ({ className, children, onClick, isBlack = false }) => {
   return (
     <>
       <button
-        type="button"
+        
         onClick={onClick && onClick}
         className={
           isBlack
