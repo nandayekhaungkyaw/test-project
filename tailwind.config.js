@@ -53,7 +53,8 @@ export default {
       },
       backgroundImage: {
         'heroBlog': "url('/src/assets/blog/heroSection.png')",
-      
+        applyForm: "url('/src/assets/login-signup-applyForm/applyForm.png')",
+        cta: "url('/src/assets/ctaBG.png')"
       },
       spacing: {
         "section-spacing": "120px", // use as className="mb-section-spacing" or "mt-section-spacing"

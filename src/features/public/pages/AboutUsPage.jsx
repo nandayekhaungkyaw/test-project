@@ -8,7 +8,7 @@ import AboutCard from "../components/AboutCard.jsx";
 import WelcomeComponent from "../components/WelcomeComponent.jsx";
 import MultipleItems from "../../../components/MultipleItems.jsx";
 import LogoCarousel from "../../../components/LogoCarousel.jsx";
-import Facilities from "../../../assets/about-us/heroOther/facilities.png"
+import Facilities from "../../../assets/about-us/heroOther/Facilities.png"
 import FeedBackSlide from "../components/FeedBackSlide.jsx";
 import {useFacilitieDataStore} from "../../../store/useFacilitieDataStore.js";
 
@@ -40,7 +40,7 @@ const AboutUsPage = () => {
     const {data : FacilitiesData} = useFacilitieDataStore()
 
   return (
-      <section className="flex flex-col min-h-screen mt-10">
+      <section className="flex flex-col min-h-screen">
           {/* hero section */}
           <div className="relative w-full h-[300px] sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
               <img
