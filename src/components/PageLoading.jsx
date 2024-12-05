@@ -2,7 +2,7 @@ import React from "react";
 
 const PageLoading = () => {
   return (
-    <div className="w-full fixed top-0 left-0">
+    <div className="w-full fixed z-50 top-0 left-0 h-screen ">
       <div className="h-1 w-full bg-blue-100 overflow-hidden">
         <div className="page-loading-progress w-full h-full bg-blue-500 left-right" />
       </div>
@@ -26,6 +26,7 @@ const PageLoading = () => {
         </svg>
         <span className="sr-only">Loading...</span>
       </div>
+      <div className=" bg-slate-50 min-h-screen"></div>
     </div>
   );
 };

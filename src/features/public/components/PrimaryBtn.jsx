@@ -1,10 +1,10 @@
 import React from "react";
 
-const PrimaryBtn = ({ className, children, onClick, isBlack = false }) => {
+const PrimaryBtn = ({ className, children, onClick, isBlack = false ,type }) => {
   return (
     <>
       <button
-        type="button"
+        type={type}
         onClick={onClick && onClick}
         className={
           isBlack

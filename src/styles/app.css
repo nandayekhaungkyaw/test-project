@@ -23,5 +23,7 @@
   }
 }
 
-
+.active{
+  @apply  font-bold text-primary-500;
+}
 

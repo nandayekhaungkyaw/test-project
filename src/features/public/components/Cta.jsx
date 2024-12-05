@@ -3,7 +3,7 @@ import PrimaryBtn from "./PrimaryBtn";
 
 const Cta = () => {
   return (
-    <div className="bg-cta rounded-lg mt-[-180px] h-80">
+    <div className="bg-cta w-full absolute -top-48 left-0  rounded-lg  h-80">
       <div className="w-full h-full flex justify-between items-center px-10">
         <div className="">
           <h1 className="text-h2 text-heroPara">Join our newsletter</h1>

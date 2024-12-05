@@ -102,7 +102,7 @@ const ContactForm = ({ handleSubmit, register, errors , reset }) => {
                         </p>
                     )}
                 </div>
-                <PrimaryBtn className="   w-40  px-3 py-2">
+                <PrimaryBtn type="submit" className="   w-40  px-3 py-2">
                     <span className="flex items-center">Send message</span>
                     <FiSend />
                 </PrimaryBtn>

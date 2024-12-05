@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const LatestBlogCard = React.forwardRef (( { img, href, title, author, descripton, date } , ref  ) => {
+const LatestBlogCard = React.forwardRef (( { img, href, title, author, description, date } , ref  ) => {
   return (
     <Link
     ref={ref}
@@ -21,7 +21,7 @@ const LatestBlogCard = React.forwardRef (( { img, href, title, author, descripto
       </p>
       <div className="flex-grow flex flex-col justify-end">
         <p className=" font-hind text-para1 line-clamp-2 ">
-      {descripton}
+      {description}
         </p>
       </div>
 
