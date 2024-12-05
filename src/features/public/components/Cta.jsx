@@ -6,12 +6,10 @@ import { MdOutlineLocationOn } from "react-icons/md";
 
 const Cta = () => {
   return (
-    <div className="bg-cta rounded-lg -mt-[180px] h-[290px] lg:h-80 w-full">
-      <div className="w-full h-full flex flex-col lg:flex-row justify-around lg:justify-between items-center px-5 lg:px-10">
-        <div className="w-full">
-          <h1 className="text-[25px] lg:text-h2 font-bold text-heroPara mb-3">
-            Join our newsletter
-          </h1>
+    <div className="bg-cta w-full absolute -top-48 left-0  rounded-lg  h-80">
+      <div className="w-full h-full flex justify-between items-center px-10">
+        <div className="">
+          <h1 className="text-h2 text-heroPara">Join our newsletter</h1>
           <div className="relative">
             <input
               type="search"

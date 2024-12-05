@@ -12,6 +12,9 @@ const Footer = ({ isCtaOn = true }) => {
     <div className=" mt-auto">
       <div className=" mt-[180px]">
         <footer className=" bg-footerColor  dark:bg-gray-900 ">
+    <div className=" mt-auto">
+      <div className=" mt-[180px]">
+        <footer className=" bg-footerColor  dark:bg-gray-900 ">
           <ContainerComponent>
             <div className=" relative py-10">
               {isCtaOn && <Cta />}

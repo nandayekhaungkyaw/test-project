@@ -66,14 +66,14 @@ const TosPage = () => {
     },
   ];
   return (
-    <section className=" flex flex-col gap-section-spacing mb-section-spacing">
+    <section className=" flex flex-col gap-10 sm:gap-20 lg:gap-section-spacing mb-10 sm:mb-20 lg:mb-section-spacing">
       <div
-        className={` h-[420px] flex  justify-center bg-bg2 items-center border `}
+        className={` lg:h-[420px] sm:h-[220px] md:h-[274px] h-[200px]   flex  justify-center bg-bg2 items-center  `}
       >
-        <h1 className=" text-heading text-h1 font-bold ">Terms & Condition</h1>
+        <h1 className=" text-heading sm:text-3xl text-2xl lg:text-h1 md:text-h2 font-bold ">Terms & Condition</h1>
       </div>
-      <ContainerComponent className=" grid grid-cols-12 gap-x-5  ">
-      <ul className=" col-span-10 col-start-2 space-y-6 ">
+      <ContainerComponent className=" grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-x-5  ">
+      <ul className=" col-span-full lg:col-span-8 lg:col-start-2 md:space-y-6 sm:space-y-4 space-y-3 ">
         {TAC.map((el, index) => (
           <TermACondition
             key={index}
