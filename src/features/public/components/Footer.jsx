@@ -18,12 +18,12 @@ const Footer = ({ isCtaOn = true }) => {
               <ContainerComponent>
                 <div className=" w-full grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 pt-5 lg:pt-28">
                   <div className="col-span-4 md:col-span-8 lg:col-span-3">
-                    <Link to="#">
+                    <Link to="/">
                       <Logo className={"h-12"} />
                     </Link>
                     <p className="mt-4 text-heroPara text-sm ">
                       Pathway Academy provides the tools and guidance to turn
-                      your goals into achievements
+                      your goals into achievements.
                     </p>
                   </div>
                   <div className="col-span-2 text-heroPara mt-5 lg:mt-0">
