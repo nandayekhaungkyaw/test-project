@@ -10,7 +10,6 @@ const CourseListPage = lazy(() =>
 const CourseDetailPage = lazy(() =>
   import("../features/public/courseDetail/Pages/CourseDetailPage")
 );
-
 const BlogPage = lazy(() => import("../features/public/pages/BlogPage"));
 const BlogDetailPage = lazy(() =>
   import("../features/public/pages/BlogDetailPage")
@@ -21,7 +20,6 @@ const PrivacyPoliciesPage = lazy(() =>
 );
 const TosPage = lazy(() => import("../features/public/pages/TosPage"));
 const SupportPage = lazy(() => import("../features/public/pages/SupportPage"));
-
 
 const publicRoute = [
   {
