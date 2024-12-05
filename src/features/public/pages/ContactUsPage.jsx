@@ -31,25 +31,22 @@ const ContactUsPage = () => {
               Customer Support
             </h3>
             <p className="flex  items-start justify-center">
-              {" "}
-              <HiOutlineMapPin className=" w-10 -mr-2 mt-1" />{" "}
+              <HiOutlineMapPin className=" w-10 -mr-2 mt-1" />
               <span className="font-hind text-para text-para4 text-wrap text-center">
-                789 Pine Drive, Apt 3B Greenwood, NY 10920 United States{" "}
-              </span>{" "}
+                789 Pine Drive, Apt 3B Greenwood, NY 10920 United States
+              </span>
             </p>
             <p className="flex gap-2 items-stretch justify-center">
-              {" "}
-              <LuPhoneCall className=" size-5 mt-1" />{" "}
+              <LuPhoneCall className=" size-5 mt-1" />
               <span className="font-hind text-para text-para4 text-wrap text-center">
                 +1 (800) 123-4567
-              </span>{" "}
+              </span>
             </p>
             <p className="flex gap-2 items-stretch justify-center">
-              {" "}
-              <HiOutlineMail className=" size-5 mt-1 " />{" "}
+              <HiOutlineMail className=" size-5 mt-1 " />
               <span className="font-hind text-para  text-para4 text-wrap text-center">
                 Pathway67@gmail.com
-              </span>{" "}
+              </span>
             </p>
           </div>
           <div className=" lg:col-span-4 col-span-full  sm:col-span-4 sm:col-start-3  bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
@@ -57,51 +54,45 @@ const ContactUsPage = () => {
               Contact Address
             </h3>
             <p className="flex  items-start justify-center">
-              {" "}
-              <HiOutlineMapPin className=" w-10 -mr-2 mt-1" />{" "}
+              <HiOutlineMapPin className=" w-10 -mr-2 mt-1" />
               <span className="font-hind text-para text-para4 text-wrap text-center">
                 P.O. Box 3456 Ocean City, FL 33121 United States
-              </span>{" "}
+              </span>
             </p>
             <p className="flex gap-2 items-stretch justify-center">
-              {" "}
-              <LuPhoneCall className=" size-5 mt-1" />{" "}
+              <LuPhoneCall className=" size-5 mt-1" />
               <span className="font-hind text-para text-para4 text-wrap text-center">
                 +1 (415) 987-6543
-              </span>{" "}
+              </span>
             </p>
             <p className="flex gap-2 items-stretch justify-center">
-              {" "}
-              <HiOutlineMail className=" size-5 mt-1 " />{" "}
+              <HiOutlineMail className=" size-5 mt-1 " />
               <span className="font-hind text-para  text-para4 text-wrap text-center">
                 Pathway67@gmail.com
-              </span>{" "}
+              </span>
             </p>
-          </div>{" "}
+          </div>
           <div className=" lg:col-span-4 col-span-full  sm:col-span-4 sm:col-start-3  bg-bg1 rounded-sm flex flex-col gap-4 justify-center p-5">
             <h3 className=" text-3xl md:text-2xl sm:text-2xl  font-semibold text-heading text-center ">
               Main Office Address
             </h3>
             <p className="flex  items-start justify-center">
-              {" "}
-              <HiOutlineMapPin className=" w-10 -mr-2 mt-1" />{" "}
+              <HiOutlineMapPin className=" w-10 -mr-2 mt-1" />
               <span className="font-hind text-para text-para4 text-wrap text-center">
-                Suite 200 Rivertown, CA 90210 United States{" "}
-              </span>{" "}
+                Suite 200 Rivertown, CA 90210 United States
+              </span>
             </p>
             <p className="flex gap-2 items-stretch justify-center">
-              {" "}
-              <LuPhoneCall className=" size-5 mt-1" />{" "}
+              <LuPhoneCall className=" size-5 mt-1" />
               <span className="font-hind text-para text-para4 text-wrap text-center">
                 +1 (555) 123-4567
-              </span>{" "}
+              </span>
             </p>
             <p className="flex gap-2 items-stretch justify-center">
-              {" "}
-              <HiOutlineMail className=" size-5 mt-1 " />{" "}
+              <HiOutlineMail className=" size-5 mt-1 " />
               <span className="font-hind text-para  text-para4 text-wrap text-center">
                 Pathway67@gmail.com
-              </span>{" "}
+              </span>
             </p>
           </div>
         </div>
@@ -112,11 +103,12 @@ const ContactUsPage = () => {
           <div className=" lg:col-span-5 sm:col-span-6 sm:justify-self-center sm:col-start-2">
             <img src={getInTouchImg} width="100%" alt="getInTouchImg" />
           </div>
-         <div className=" flex flex-col sm:col-span-full gap-5 py-2 lg:col-span-6 sm:px-12 md:px-14   lg:col-start-7">
+          <div className=" flex flex-col sm:col-span-full gap-5 py-2 lg:col-span-6 sm:px-12 md:px-14   lg:col-start-7">
             <div className="flex gap-5 ">
-              {" "}
               <div className="flex flex-col gap-2 flex-grow">
-                <label className=" font-kite" htmlFor="nameForContactForm">Name</label>
+                <label className=" font-kite" htmlFor="nameForContactForm">
+                  Name
+                </label>
                 <input
                   id="nameForContactForm"
                   className="  flex    w-full rounded-lg border border-paraTertiary  px-3 py-2
@@ -126,9 +118,11 @@ const ContactUsPage = () => {
                   name="nameForContactForm"
                   type="text"
                 />
-              </div>{" "}
+              </div>
               <div className="flex flex-col gap-2 flex-grow">
-                <label className=" font-kite" htmlFor="emailForContactForm">Email</label>
+                <label className=" font-kite" htmlFor="emailForContactForm">
+                  Email
+                </label>
                 <input
                   id="emailForContactForm"
                   className="  flex    w-full rounded-md border border-paraTertiary  px-3 py-2
@@ -141,7 +135,9 @@ const ContactUsPage = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2 ">
-              <label className=" font-kite" htmlFor="phoneForContactForm">Phone</label>
+              <label className=" font-kite" htmlFor="phoneForContactForm">
+                Phone
+              </label>
               <input
                 id="phoneForContactForm"
                 className="  flex     w-full rounded-lg border border-paraTertiary  px-3 py-2
@@ -153,10 +149,11 @@ const ContactUsPage = () => {
               />
             </div>
             <div className="flex flex-col flex-grow gap-2 ">
-              <label className=" font-kite" htmlFor="messageForContactForm">Message</label>
+              <label className=" font-kite" htmlFor="messageForContactForm">
+                Message
+              </label>
               <textarea
-              rows="4"
-              
+                rows="4"
                 className=" flex-grow rounded-lg px-4 py-3 w-full flex border border-paraTertiary
                             ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium 
                             placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 
@@ -171,19 +168,16 @@ const ContactUsPage = () => {
                 className="flex items-center
               "
               >
-                {" "}
                 Send message
               </span>
               <FiSend />
             </PrimaryBtn>
             <div className="flex gap-5 items-center">
-              {" "}
               <p className=" font-medium text-para text-footerColor">
                 Follow us on
               </p>
               <div className=" flex gap-2 ">
                 <a href="#">
-                  {" "}
                   <FBicon
                     className=" p-2 rounded-md  bg-para4 "
                     width="32"
@@ -192,7 +186,6 @@ const ContactUsPage = () => {
                   />
                 </a>
                 <a href="#">
-                  {" "}
                   <IGicon
                     className=" p-2 rounded-md  bg-para4 "
                     width="32"
@@ -201,16 +194,14 @@ const ContactUsPage = () => {
                   />
                 </a>
                 <a href="#">
-                  {" "}
                   <TwitterIcon
                     className=" p-2 rounded-md  bg-para4 "
                     width="32"
                     height="32"
                     iconColor="white"
                   />
-                </a>{" "}
+                </a>
                 <a href="#">
-                  {" "}
                   <Linkedinicon
                     className=" p-2 rounded-md  bg-para4 "
                     width="32"
@@ -219,7 +210,6 @@ const ContactUsPage = () => {
                   />
                 </a>
                 <a href="#">
-               
                   <YTicon
                     className=" p-2 rounded-md  bg-para4 "
                     width="32"
@@ -229,7 +219,7 @@ const ContactUsPage = () => {
                 </a>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
         <div className=" col-span-full  lg:h-[478px] h-[250px] sm:h-[337px] ">
           <iframe

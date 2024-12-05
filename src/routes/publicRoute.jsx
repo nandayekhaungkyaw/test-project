@@ -1,23 +1,4 @@
 import { lazy } from "react";
-
-
-// const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
-// const ContactUsPage = lazy(() =>
-//   import("../features/public/pages/ContactUsPage")
-// );
-
-// import LandingPage from "../features/public/pages/LandingPage";
-// import CourseListPage from "../features/public/pages/CourseListPage";
-// import CourseDetailPage from "../features/public/pages/CourseDetailPage";
-// import BlogPage from "../features/public/pages/BlogPage";
-// import BlogDetailPage from "../features/public/pages/BlogDetailPage";
-// import FaqPage from "../features/public/pages/FaqPage";
-// import PrivacyPoliciesPage from "../features/public/pages/PrivacyPoliciesPage";
-// import TosPage from "../features/public/pages/TosPage";
-// import SupportPage from "../features/public/pages/SupportPage";
-
-// import { lazy } from "react";
-
 const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
 const ContactUsPage = lazy(() =>
   import("../features/public/pages/ContactUsPage")
@@ -42,24 +23,10 @@ const PrivacyPoliciesPage = lazy(() =>
 const TosPage = lazy(() => import("../features/public/pages/TosPage"));
 const SupportPage = lazy(() => import("../features/public/pages/SupportPage"));
 
-// const publicRoute = [
-//   {
-//     index: true,
-//     element: <HomePage />,
-//   },
-//   {
-//     path: "about-us",
-//     element: <AboutUsPage />,
-//   },
-//   {
-//     path: "contact-us",
-//     element: <ContactUsPage />,
-//   },
-// ];
 
 const publicRoute = [
   {
-    path: "home",
+    path: "/",
     element: <LandingPage />,
   },
   {

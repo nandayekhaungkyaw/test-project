@@ -9,11 +9,10 @@ const PublicLayout = () => {
     <main className=" flex flex-col min-h-screen">
 
       <Header />
-
       <Suspense fallback={<PageLoading />}>
         <Outlet />
       </Suspense>
-      <Footer  />
+      <Footer />
     </main>
   );
 };
