@@ -31,7 +31,7 @@ const BlogDetailPage = () => {
           <h2 className="px-4 text-heading font-semibold text-2xl text-wrap w-[80%]">
             By Marni Baker , Chief Content Officer, Pathway Academy
           </h2>
-          <p className="px-4 text-para2 text-para4  w-[80%]">
+          <p className="px-4  text-para4  w-[80%]">
             We're excited to announce the expansion of our entry-level
             Professional Certificate portfolio with 10 new programs from
             industry partners. Pathway Academy now offers 80+ entry-level

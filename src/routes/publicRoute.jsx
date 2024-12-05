@@ -59,7 +59,7 @@ const SupportPage = lazy(() => import("../features/public/pages/SupportPage"));
 
 const publicRoute = [
   {
-    path: "home",
+    path: "/",
     element: <LandingPage />,
   },
   {
