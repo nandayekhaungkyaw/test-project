@@ -16,7 +16,7 @@ export default function Instructor() {
 
       {/* Profile Section */}
       <div className="max-w-5xl mx-auto ">
-        <div className="flex items-start gap-[10px] py-3 px-3 rounded-lg">
+        <div className="flex flex-col md:flex-row items-start gap-[10px] py-3 px-3 rounded-lg">
           <div className="w-48 h-48 overflow-hidden flex-shrink-0">
             <img
               src={`${instructor}`}
